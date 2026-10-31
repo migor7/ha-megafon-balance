@@ -1,0 +1,13 @@
+{
+  "domain": "megafon_balance",
+  "name": "Мегафон: баланс",
+  "codeowners": [
+    "@migor7"
+  ],
+  "config_flow": true,
+  "documentation": "https://github.com/migor7/ha-megafon-balance",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/migor7/ha-megafon-balance/issues",
+  "requirements": [],
+  "version": "0.5.0"
+}

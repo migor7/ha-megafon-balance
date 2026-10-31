@@ -1,0 +1,86 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Megafon: balance",
+        "description": "Number and password of the Megafon personal account (lk.megafon.ru). A password can be set in the cabinet or with USSD *105*00#.",
+        "data": {
+          "username": "Phone number",
+          "password": "Password"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Megafon: balance",
+        "data": {
+          "password": "Password"
+        }
+      }
+    },
+    "error": {
+      "bad_number": "Enter a 10-digit number (+7 or 8 prefix is fine)",
+      "captcha": "Megafon asks for a captcha. Log in once at lk.megafon.ru in a browser, then try again later.",
+      "megafon": "Megafon replied: {message}"
+    },
+    "abort": {
+      "already_configured": "This number is already added",
+      "reauth_successful": "Password updated"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "menu_options": {
+          "general": "General schedule (all numbers)",
+          "pick_number": "Own schedule for a number"
+        }
+      },
+      "general": {
+        "title": "General schedule (all numbers)",
+        "data": {
+          "every": "Update every",
+          "unit": "Unit",
+          "at_hour": "At hour (when the unit is days)"
+        },
+        "data_description": {
+          "every": "From every hour to once a month: e.g. 6 hours, 1 day, 3 days, 7 days (weekly), 30 days (monthly)."
+        }
+      },
+      "pick_number": {
+        "title": "Own schedule for a number",
+        "data": {
+          "number": "Number"
+        }
+      },
+      "number_schedule": {
+        "title": "Schedule for {number}",
+        "data": {
+          "own_schedule": "Own schedule for this number (off = use the general one)",
+          "every": "Update every",
+          "unit": "Unit",
+          "at_hour": "At hour (when the unit is days)"
+        },
+        "data_description": {
+          "every": "From every hour to once a month: e.g. 6 hours, 1 day, 3 days, 7 days (weekly), 30 days (monthly)."
+        }
+      }
+    },
+    "error": {
+      "too_rare": "At most once a month: up to 31 days or 744 hours"
+    }
+  },
+  "entity": {
+    "sensor": {
+      "balance": {
+        "name": "Balance"
+      }
+    }
+  },
+  "selector": {
+    "unit": {
+      "options": {
+        "hours": "hours",
+        "days": "days"
+      }
+    }
+  }
+}
